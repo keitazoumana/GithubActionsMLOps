@@ -28,5 +28,5 @@ joblib.dump(vectorizer, open("./vectors/vectorizer.pickle", "wb"))
 
 # Save the metrics
 saving_folder = "./data/metrics"
-final_file_name = "metrics.json"
+final_file_name = "model_metrics.json"
 dm.save_metrics(report, saving_folder, final_file_name)
