@@ -1,0 +1,18 @@
+cmd: python3 train_model.py
+deps:
+- path: data/preprocessed/spam_preprocessed.csv
+  md5: db6851653617574c87fecb020c16212f
+  size: 512874
+- path: train_model.py
+  md5: a9e5ce9c7587509b200fccfa87d44df3
+  size: 1060
+outs:
+- path: data/metrics/metrics.json
+  md5: d310c9773629fba7cda4314cd8b88c2d
+  size: 112
+- path: models/spam_detector_model.pkl
+  md5: b58d0584e58bb20ae903bf9d18a9a13a
+  size: 278397
+- path: vectors/vectorizer.pickle
+  md5: 5d51453adb6b0a4d2936ec224f58469f
+  size: 165955

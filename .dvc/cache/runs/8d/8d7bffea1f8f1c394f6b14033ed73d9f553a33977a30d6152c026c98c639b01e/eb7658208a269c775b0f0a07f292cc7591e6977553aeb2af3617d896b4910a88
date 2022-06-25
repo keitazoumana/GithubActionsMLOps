@@ -1,0 +1,9 @@
+cmd: python3 acquire_data.py
+deps:
+- path: acquire_data.py
+  md5: 1330a23fcd799b2574ccc2ceb95ec053
+  size: 233
+outs:
+- path: data/raw/spam.csv
+  md5: f10885f3e274a202196a88cb8bb3e15e
+  size: 499322

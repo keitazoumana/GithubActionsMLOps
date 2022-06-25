@@ -1,0 +1,26 @@
+stages:
+  acquire_data:
+    cmd: python3 acquire_data.py
+    deps:
+    - acquire_data.py
+    outs:
+    - data/raw/spam.csv
+
+  preprocess_data:
+    cmd: python3 preprocess_data.py
+    deps:
+    - preprocess_data.py
+    - data/raw/spam.csv
+    outs:
+    - data/preprocessed/spam_preprocessed.csv
+
+  train_model:
+    cmd: python3 train_model.py
+    deps:
+    - train_model.py
+    - data/preprocessed/spam_preprocessed.csv
+    outs:
+    - models/spam_detector_model.pkl
+    - vectors/vectorizer.pickle
+    - data/metrics/metrics.json
+
