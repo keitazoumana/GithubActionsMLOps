@@ -16,7 +16,7 @@ prepared_data = pd.read_csv(path_to_data)
 # 2.Create train - test split
 train_test_data, vectorizer = dm.create_train_test_data(prepared_data['text'], 
                                          prepared_data['label'], 
-                                         0.25, 12)
+                                         0.30, 2024)
 
 # 3.Run training
 model, report = mt.run_model_training(train_test_data['x_train'], train_test_data['x_test'], 
@@ -28,5 +28,5 @@ joblib.dump(vectorizer, open("./vectors/vectorizer.pickle", "wb"))
 
 # Save the metrics
 saving_folder = "./data/metrics"
-final_file_name = "model_metrics.json"
+final_file_name = "metrics.json"
 dm.save_metrics(report, saving_folder, final_file_name)
