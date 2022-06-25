@@ -28,7 +28,7 @@ jobs:
             env:
             repo_token: ${{ secrets.GITHUB_TOKEN }}
             run: |
-            python3 acquire_data.py
+            python3 preprocess_data.py
 
     train_model:
         name: Train Model  
