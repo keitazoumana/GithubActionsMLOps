@@ -28,21 +28,3 @@ jobs:
               id: train_model
               uses: actions/checkout@v2
               run: python3 train_model.py
- 
-
-"""""
-    train_model:
-        name: Train Model  
-        runs-on: [ubuntu-latest]
-        container: docker://dvcorg/cml-py3:latest
-        steps:
-        - name: Training the Model 
-        - id: train_model
-        - uses: actions/checkout@v2
-            env:
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-            run: |
-            pip install -r requirements.txt
-            dvc repro 
-
- """""
