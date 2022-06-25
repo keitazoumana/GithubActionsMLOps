@@ -5,7 +5,7 @@ on:
             - master
 
         paths:
-            - .github/workflows/train_model.yaml
+            - .github/workflows/mlops_pipeline.yaml
 jobs:
     get_data:
         name: Get Raw Data  
