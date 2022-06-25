@@ -1,4 +1,4 @@
-name: MLOps Pipeline
+name: Classification Pipeline
 on: [push, pull_request]
 
 jobs:
