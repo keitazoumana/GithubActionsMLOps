@@ -1,8 +1,5 @@
 name: MLOps Pipeline
-on: 
-    pull_request:
-        paths:
-            - .github/workflows/mlops_pipeline.yaml
+on: [push, pull_request]
 
 jobs:
     run_pipeline:
