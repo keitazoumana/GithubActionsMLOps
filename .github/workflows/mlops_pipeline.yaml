@@ -1,0 +1,64 @@
+name: MLOps Pipeline
+on: 
+    push:
+        branches:
+            - master
+
+        paths:
+            - .github/workflows/train_model.yaml
+jobs:
+    get_data:
+        name: Get Raw Data  
+        runs-on: [ubuntu-latest]
+        container: docker://dvcorg/cml-py3:latest
+        steps:
+        - name: Getting Data From Github 
+        - id: raw_data
+        - uses: actions/checkout@v2
+            env:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+            run: |
+            python3 acquire_data.py
+
+    preprocess_data:
+        name: Preprocess Data  
+        runs-on: [ubuntu-latest]
+        container: docker://dvcorg/cml-py3:latest
+        steps:
+        - name: Preprocessing Raw Data 
+        - id: preprocess_data
+        - uses: actions/checkout@v2
+            env:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+            run: |
+            python3 acquire_data.py
+
+    train_model:
+        name: Train Model  
+        runs-on: [ubuntu-latest]
+        container: docker://dvcorg/cml-py3:latest
+        steps:
+        - name: Training the Model 
+        - id: train_model
+        - uses: actions/checkout@v2
+            env:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+            run: |
+            python3 train_model.py
+
+"""""
+    train_model:
+        name: Train Model  
+        runs-on: [ubuntu-latest]
+        container: docker://dvcorg/cml-py3:latest
+        steps:
+        - name: Training the Model 
+        - id: train_model
+        - uses: actions/checkout@v2
+            env:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+            run: |
+            pip install -r requirements.txt
+            dvc repro 
+
+ """""
