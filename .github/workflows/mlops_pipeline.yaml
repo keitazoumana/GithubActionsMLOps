@@ -3,45 +3,35 @@ on:
     pull_request:
         paths:
             - .github/workflows/mlops_pipeline.yaml
+
 jobs:
-    get_data:
-        name: Get Raw Data  
+    run_pipeline:
+        name: Run All the ML workflows
         runs-on: [ubuntu-latest]
         container: docker://dvcorg/cml-py3:latest
         steps:
-        - name: Getting Data From Github 
-        - id: raw_data
-        - uses: actions/checkout@v2
-            env:
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-            run: |
-            python3 acquire_data.py
+            - name: Install Requirements 
+              id: model_requirements
+              uses: actions/checkout@v2
+              run: pip install -r requirements.txt
 
-    preprocess_data:
-        name: Preprocess Data  
-        runs-on: [ubuntu-latest]
-        container: docker://dvcorg/cml-py3:latest
-        steps:
-        - name: Preprocessing Raw Data 
-        - id: preprocess_data
-        - uses: actions/checkout@v2
-            env:
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-            run: |
-            python3 preprocess_data.py
+            - name: Getting Data From Github 
+              id: raw_data
+              uses: actions/checkout@v2
+              env:
+                repo_token: ${{ secrets.GITHUB_TOKEN }}
+              run: python3 acquire_data.py
+            
+            - name: Preprocess Raw Data 
+              id: preprocessed_data
+              uses: actions/checkout@v2
+              run: python3 preprocess_data.py
 
-    train_model:
-        name: Train Model  
-        runs-on: [ubuntu-latest]
-        container: docker://dvcorg/cml-py3:latest
-        steps:
-        - name: Training the Model 
-        - id: train_model
-        - uses: actions/checkout@v2
-            env:
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-            run: |
-            python3 train_model.py
+              - name: Train ML Model
+              id: train_model
+              uses: actions/checkout@v2
+              run: python3 train_model.py
+ 
 
 """""
     train_model:
