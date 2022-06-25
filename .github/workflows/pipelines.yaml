@@ -10,18 +10,12 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: pip install -r requirements.txt
-          dvc repro 
+
       - name: get_data
-        env:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: python3 acquire_data.py
 
       - name: preprocess_data
-        env:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: python3 preprocess_data.py
 
       - name: train_model
-        env:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: python3 train_model.py
