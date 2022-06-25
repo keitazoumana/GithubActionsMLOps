@@ -1,4 +1,4 @@
-name: Training
+name: Workflow Running
 on: [push]
 jobs:
   run:
