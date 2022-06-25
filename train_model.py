@@ -16,7 +16,7 @@ prepared_data = pd.read_csv(path_to_data)
 # 2.Create train - test split
 train_test_data, vectorizer = dm.create_train_test_data(prepared_data['text'], 
                                          prepared_data['label'], 
-                                         0.30, 2023)
+                                         0.25, 2021)
 
 # 3.Run training
 model, report = mt.run_model_training(train_test_data['x_train'], train_test_data['x_test'], 
