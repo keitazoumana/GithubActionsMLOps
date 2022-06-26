@@ -1,21 +1,21 @@
-name: Workflow Running
-on: [push]
+name: ETL Train Save Model 
+on: [push, pull_request]
 jobs:
   run:
     runs-on: [ubuntu-latest]
     container: docker://dvcorg/cml-py3:latest
     steps:
       - uses: actions/checkout@v2
-      - name: install_packages
+      - name: Install Packages
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: pip install -r requirements.txt
 
-      - name: get_data
+      - name: Data Acquisition
         run: python3 acquire_data.py
 
-      - name: preprocess_data
+      - name: Data Preprocessing 
         run: python3 preprocess_data.py
 
-      - name: train_model
+      - name: Model Training
         run: python3 train_model.py

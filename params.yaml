@@ -1,0 +1,12 @@
+dvc_config:
+    DVC_REMOTE_URL: "https://dagshub.com/zoumana.keita/MultiLanguageSentimentStreamlitApp.dvc"
+    USERNAME: "zoumana.keita"
+    PASSWORD: "eb68a4accdf21c0dffe8f3defeca181d4a7fd6f5"
+  
+model_data_config:
+    MODEL_PATH: "./model"
+    METRICS_PATH: "./data"
+
+ec2_prepare:
+    DAGSHUB_REMOTE_URL: "https://dagshub.com/zoumana.keita/MultiLanguageSentimentStreamlitApp"
+    REQUIREMENTS: "requirements.txt"
