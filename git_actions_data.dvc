@@ -1,0 +1,5 @@
+outs:
+- md5: 32bdc148d2ab212f05d96633fd26eb64.dir
+  size: 1012308
+  nfiles: 3
+  path: git_actions_data

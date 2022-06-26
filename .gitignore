@@ -1,2 +1,5 @@
 /fastapi_env
 .vscode
+./git_actions_data
+./git_actions_models
+./git_actions_vectors

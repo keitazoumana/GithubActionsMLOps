@@ -1,12 +1,23 @@
 dvc_config:
-    DVC_REMOTE_URL: "https://dagshub.com/zoumana.keita/MultiLanguageSentimentStreamlitApp.dvc"
+    DVC_REMOTE_URL: "https://dagshub.com/zoumana.keita/GithubActionsMLOps.dvc"
     USERNAME: "zoumana.keita"
-    PASSWORD: "eb68a4accdf21c0dffe8f3defeca181d4a7fd6f5"
+    PASSWORD: "MY PASSWORD"
   
 model_data_config:
-    MODEL_PATH: "./model"
-    METRICS_PATH: "./data"
+    MODEL_PATH: "./git_actions_models"
+    METRICS_PATH: "./git_actions_data/metrics"
 
 ec2_prepare:
-    DAGSHUB_REMOTE_URL: "https://dagshub.com/zoumana.keita/MultiLanguageSentimentStreamlitApp"
+    DAGSHUB_REMOTE_URL: "[MY REMOTE URL]"
     REQUIREMENTS: "requirements.txt"
+    EC2_KEY_PAIR: "[PATH TO MY SECRET KEY]"
+
+host_information:
+    HOST: "github_actions_instance" # This is the name I gave my EC2 HOST in the ~/.ssh/config file
+    EC2_USER:  "ec2-user"
+    EC2_IP: "[MY IP ADDRESS]"
+    EC2_REMOTE_DIRECTORY: "[MY REMOTE DIRECTORY]"
+
+meta_data:
+    DOCKERFILE: "./docker/Dockerfile"
+    APP: "app.py"

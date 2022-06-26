@@ -1,0 +1,5 @@
+outs:
+- md5: f0dd0875eb91e92d72c014b31c111d8c.dir
+  size: 165955
+  nfiles: 1
+  path: git_actions_vectors
