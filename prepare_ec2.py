@@ -33,6 +33,9 @@
     MODEL_PATH = model_data_params["MODEL_PATH"]
     DATA_PATH = model_data_params["METRICS_PATH"]
 
+    # Configure DVC 
+
+
     # 2. Pull data and model
     os.system("dvc pull {MODEL_PATH} {DATA_PATH}")
 

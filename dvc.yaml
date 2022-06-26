@@ -24,3 +24,9 @@ stages:
     - git_actions_vectors/vectorizer.pickle
     - git_actions_data/metrics/metrics.json
 
+  save_to_dvc:
+    cmd: python3 save_to_dvc.py
+    deps:
+    - git_actions_data
+    - git_actions_vectors
+    - git_actions_models

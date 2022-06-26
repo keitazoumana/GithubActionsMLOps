@@ -20,4 +20,8 @@ jobs:
       - name: Model Training
         run: python3 train_model.py
 
-      - 
+      - name: Push Data and Models to DVC 
+        run: python3 save_to_dvc.py 
+
+      - name: Connect to EC2 and Deploy Model 
+        run: python3 prepare_ec2.py 
