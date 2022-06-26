@@ -31,24 +31,18 @@ The following prerequisites are required to make this repository work:
 DagsHub provides the capabilities to use MLFlow and DVC while giving the choice of working on Github. The following results are the experiments from DagsHub, using MLFlow to track the model `F1-Score`, `Precision` and `Recall`.
 
 <p align="center">
-  <img src="./images/experiments.png" alt="Experiment on DagsHub" height="200"/>
+  <img src="./images/experiments.png" alt="Experiment on DagsHub" height="300"/>
 </p>
 
 ## Github Actions Experiment 
 The following animation corresponds to the execution of the pipeline using Github Actions from Data Extraction to Model Training. 
 
-<p align="center">
-  <iframe width="420" height="315"
-    src="https://gfycat.com/blackandwhitearctichyracotherium">
-  </iframe>
-</p>
+[![Github Actions Experiment]]([https://youtu.be/T-D1KVIuvjA](https://gfycat.com/blackandwhitearctichyracotherium))
+
 
 ## Test App Locally
 
 ## Deploy into Production with Github Actions
 
-<p align="center">
-  <iframe width="420" height="315"
-    src="https://gfycat.com/kaleidoscopicjointblueandgoldmackaw">
-  </iframe>
-</p>
+[![Deployed ]](https://gfycat.com/kaleidoscopicjointblueandgoldmackaw))
+
