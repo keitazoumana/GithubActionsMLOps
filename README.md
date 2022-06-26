@@ -27,6 +27,14 @@ The following prerequisites are required to make this repository work:
 - DVC 2.11  
 - You can find all the additional information in the `requirements.txt` file
 
+#### Main Components of Github Actions
+GitHub Actions contains five main components as shown below. 
+
+<p align="center">
+  <img src="./images/github_actions_steps.png" alt="GitHub Actions Components" height="300"/>
+</p>
+
+
 ## Results On DagsHub
 DagsHub provides the capabilities to use MLFlow and DVC while giving the choice of working on Github. The following results are the experiments from DagsHub, using MLFlow to track the model `F1-Score`, `Precision` and `Recall`.
 
@@ -37,12 +45,15 @@ DagsHub provides the capabilities to use MLFlow and DVC while giving the choice 
 ## Github Actions Experiment 
 The following animation corresponds to the execution of the pipeline using Github Actions from Data Extraction to Model Training. 
 
-[![Github Actions Experiment]]([https://youtu.be/T-D1KVIuvjA](https://gfycat.com/blackandwhitearctichyracotherium))
+<p align="center">
+  <img src="./images/github_actions_pipeline.png" alt="Github Actions Experiment" height="300"/>
+</p>
 
 
 ## Test App Locally
+This is the test performed lically, to make sure everything is working before deploying into production. 
+
 
 ## Deploy into Production with Github Actions
-
-[![Deployed ]](https://gfycat.com/kaleidoscopicjointblueandgoldmackaw))
+Final result after deploying into production environment
 
