@@ -71,4 +71,4 @@ This is the final result after the model is deployed into productiion.
 </p>
 
 ## Full Article On Medium 
-Read the full article on [my medium](https://zoumanakeita.medium.com/) and Follow me for more content.
+Read the full article on [my medium](https://medium.com/geekculture/github-actions-for-machine-learning-train-test-and-deploy-your-ml-model-on-aws-ec2-9a3002c6bb9f) and Follow me for more content.
